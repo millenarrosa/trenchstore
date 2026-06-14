@@ -22,8 +22,6 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/discos" element={<DiscosPage />} />
-
-          {/* 👇 A NOVA ROTA AQUI 👇 */}
           <Route path="/ComoComprar" element={<ComoComprar />} />
 
           {/* Rotas privadas — qualquer usuário logado */}

@@ -27,7 +27,7 @@ describe("POST /auth/signup", () => {
   it("deve retornar 409 para e-mail duplicado", async () => {
     const res = await request(app).post("/auth/signup").send({
       nome: "Usuário Teste",
-      email: "teste@trench.com", // mesmo e-mail de cima
+      email: "teste@trench.com",
       telefone: "54991895737",
       senha: "123456",
     });

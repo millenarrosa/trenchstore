@@ -44,7 +44,6 @@ function HomePage() {
     buscarDiscos();
   }, []);
 
-  // Destaques sempre no topo
   const discosOrdenados = [...discos].sort((a, b) => {
     if (a.destaque && !b.destaque) return -1;
     if (!a.destaque && b.destaque) return 1;
@@ -64,7 +63,6 @@ function HomePage() {
     );
   });
 
-  // Separa destaques (máx 4) e restante
   const destaques = discosFiltrados.filter((d) => d.destaque).slice(0, 4);
   const demaisDiscos =
     !categoria && !termoBusca

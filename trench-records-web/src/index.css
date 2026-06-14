@@ -4,13 +4,12 @@ body,
   min-height: 100vh;
 }
 
-/* Efeito de hover para os links do menu */
 .menu-link-custom {
-  transition: color 0.2s ease-in-out; /* Deixa a mudança de cor suave */
+  transition: color 0.2s ease-in-out;
 }
 
 .menu-link-custom:hover {
-  color: #000000 !important; /* Força a cor preta quando o mouse passar */
+  color: #000000 !important;
 }
 
 .nav-link:hover {

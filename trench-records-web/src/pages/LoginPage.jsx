@@ -30,7 +30,6 @@ function LoginPage() {
 
     try {
       await login(form.email, form.senha);
-      // Redirecionamento já feito dentro do AuthContext
     } catch (err) {
       const mensagem =
         err.response?.data?.erro || "Erro ao fazer login. Tente novamente.";

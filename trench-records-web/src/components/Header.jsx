@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Container, Button, Form, InputGroup, Nav } from "react-bootstrap";
-// 1. Adicionamos o useLocation aqui embaixo 👇
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
@@ -9,7 +8,6 @@ function Header() {
   const navigate = useNavigate();
   const [busca, setBusca] = useState("");
 
-  // 2. Lendo a URL e a busca atual 👇
   const location = useLocation();
   const buscaAtual = new URLSearchParams(location.search).get("busca");
   const pathname = location.pathname; // Usado para o "Como Comprar"

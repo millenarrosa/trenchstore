@@ -13,6 +13,7 @@ A **TRENCH Store** é uma aplicação de e-commerce desenvolvida para venda de d
 ![Página Inicial](img/loginpage1.png)
 ![Página Inicial](img/discosinternacionais.png)
 ![Pedido](img/pedidos1.png)
+![Cadastro de Disco](img/discoadmin.png)
 
 ---
 
@@ -212,37 +213,6 @@ npx cypress run
 
 ![Teste](img/teste1.png)
 ![Teste](img/teste2.png)
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-trench-store/
-│
-├── trench-records-api/          # Back-end
-│   ├── prisma/
-│   │   ├── schema.prisma        # Modelo do banco de dados
-│   │   └── migrations/          # Histórico de migrations
-│   ├── src/
-│   │   ├── controllers/         # Lógica de negócio
-│   │   ├── middlewares/         # JWT auth e autorização
-│   │   ├── routes/              # Definição das rotas
-│   │   ├── app.js               # Configuração do Express
-│   │   ├── prisma.js            # Instância do Prisma
-│   │   └── server.js            # Ponto de entrada
-│   └── tests/                   # Testes Jest + Supertest
-│
-└── trench-records-web/          # Front-end
-    ├── cypress/
-    │   └── e2e/                 # Testes Cypress
-    ├── public/                  # Assets estáticos
-    └── src/
-        ├── components/          # Componentes reutilizáveis
-        ├── contexts/            # Context API (AuthContext)
-        ├── pages/               # Páginas da aplicação
-        └── services/            # Configuração do Axios
-```
 
 ---
 

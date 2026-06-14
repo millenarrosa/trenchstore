@@ -5,7 +5,6 @@ const atualizarUsuario = async (req, res) => {
   const { nome, telefone } = req.body;
   const usuarioLogado = req.usuario;
 
-  // Cliente só pode atualizar o próprio perfil
   if (usuarioLogado.role !== "admin" && usuarioLogado.id !== Number(id)) {
     return res.status(403).json({ erro: "Acesso negado." });
   }
