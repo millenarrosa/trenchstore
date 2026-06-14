@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+  id        Int      @id @default(autoincrement())
+  nome      String
+  email     String   @unique
+  senha     String
+  telefone  String?
+  role      String   @default("cliente")
+  criadoEm DateTime @default(now())
+  pedidos   Pedido[]
+}
+
+model Disco {
+  id           Int          @id @default(autoincrement())
+  titulo       String
+  artista      String
+  genero       String
+  preco        Float
+  estoque      Int          @default(0)
+  imagemUrl    String?
+  destaque     Boolean      @default(false)
+  nacional     Boolean      @default(false)   // ← novo
+  internacional Boolean     @default(false)   // ← novo
+  oferta       Boolean      @default(false)   // ← novo
+  criadoEm     DateTime     @default(now())
+  pedidoDiscos PedidoDisco[]
+}
+
+model Pedido {
+  id         Int          @id @default(autoincrement())
+  status     String       @default("pendente") // "pendente", "pago", "cancelado"
+  criadoEm   DateTime     @default(now())
+  usuarioId  Int
+  usuario    Usuario      @relation(fields: [usuarioId], references: [id])
+  pedidoDiscos PedidoDisco[]
+}
+
+// Tabela de junção (N:N entre Pedido e Disco)
+model PedidoDisco {
+  id        Int    @id @default(autoincrement())
+  quantidade Int   @default(1)
+  pedidoId  Int
+  discoId   Int
+  pedido    Pedido @relation(fields: [pedidoId], references: [id])
+  disco     Disco  @relation(fields: [discoId], references: [id])
+}
