@@ -83,7 +83,7 @@ A **TRENCH Store** é uma aplicação de e-commerce desenvolvida para venda de d
 
 ```bash
 git clone https://github.com/millenarrosa/trenchstore.git
-cd trenchrecords
+cd trenchstore
 ```
 
 ### 2. Configure e inicie o Back-end
