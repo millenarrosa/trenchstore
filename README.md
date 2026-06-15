@@ -216,12 +216,12 @@ npx cypress run
 
 ---
 
-## 👩‍💻 Autora
+## Autora
 
 Desenvolvido por **Millena Rosa**.
 
 ---
 
-## 📄 Licença
+## Licença
 
 Este projeto foi desenvolvido para fins acadêmicos.
