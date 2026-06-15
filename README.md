@@ -95,8 +95,8 @@ cd trench-records-api
 npm install
 
 # Crie o arquivo .env
-echo 'DATABASE_URL="file:./prisma/dev.db"' > .env
-echo 'JWT_SECRET="trench_records_super_secreto_2024"' >> .env
+echo DATABASE_URL="file:./dev.db" > .env
+echo JWT_SECRET="trench_records_super_secreto_2024" >> .env
 
 # Rode as migrations
 npx prisma migrate deploy
